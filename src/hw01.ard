@@ -18,6 +18,14 @@
    second' = flip (second 0)
 -}
 
+\func second (_ y _ : Nat) : Nat => y
+
+\func apply (f : Nat -> Nat) (x : Nat) : Nat => f x
+
+\func compose (f : Nat -> Nat) (g : Nat -> Nat) : Nat -> Nat => \lam x => f (g x)
+
+\func flip (f : Nat -> Nat -> Nat) (x y : Nat) : Nat =>  f y x
+
 -- 3. Расставьте приоритеты функций f1, f2, f3, f4, f5 и f6 так, чтобы функция test проходила тайпчекинг.
 
 \import lect01 \hiding (+,*)
